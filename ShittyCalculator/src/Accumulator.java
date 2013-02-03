@@ -72,4 +72,5 @@ public class Accumulator {
 		ac.receiveValue("2");
 		ac.receiveValue("ENTERMONEY");
 	}
-}
+
+	}
