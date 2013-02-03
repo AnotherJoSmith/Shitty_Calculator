@@ -43,11 +43,14 @@ public class Accumulator {
 		value += s;	
 	}
 
+	// Sould be called on clear() in CU
+	public void reset() {
+		value = "0";
+	}
+
 	public void display() {
 		System.out.println(value);
 	}
-
-	// derp
 
 	public boolean isInteger(String v) {
 		try {
@@ -56,19 +59,6 @@ public class Accumulator {
 		} catch(Exception e) {
 			return false;
 		}
-	}
-
-	public static void main(String[] args) {
-		Accumulator ac = new Accumulator();
-
-		ac.receiveValue("4");
-		ac.receiveValue("4");
-		ac.receiveValue("4");
-		ac.receiveValue("4");
-		ac.receiveValue(".");
-		ac.receiveValue("2");
-		ac.receiveValue("2");
-		ac.receiveValue("ENTERMONEY");
 	}
 
 }
