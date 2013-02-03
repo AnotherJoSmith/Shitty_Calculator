@@ -12,8 +12,7 @@ public class MemoryRegistry {
 
 	public void transferYourValue() {
 
-		
-	}
 
+	}
 
 }
