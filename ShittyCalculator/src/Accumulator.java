@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-class Accumulator{
-	
-=======
 public class Accumulator {
 	private String value; 
 	
@@ -49,5 +45,4 @@ public class Accumulator {
 			return false;
 		}
 	}
->>>>>>> ffc70979263a3d385577b5d3d45f288a0f729d4f
 }
