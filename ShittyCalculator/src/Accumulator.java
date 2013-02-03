@@ -10,9 +10,7 @@ public class Accumulator {
 		this.value = value;
 	}
 
-	//dafuq
 	public void transferYourValue() {
-		//lkl
 	}
 
 	public boolean receiveValue(String s) {
