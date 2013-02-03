@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-class MemoryRegistry{
-	
-=======
+
 public class MemoryRegistry {
 	private double mem;
 	
@@ -16,5 +13,4 @@ public class MemoryRegistry {
 	public void transferYourValue() {
 		
 	}
->>>>>>> ffc70979263a3d385577b5d3d45f288a0f729d4f
 }
