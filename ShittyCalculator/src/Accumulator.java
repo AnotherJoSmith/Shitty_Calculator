@@ -12,7 +12,7 @@ public class Accumulator {
 	
 	//dafuq
 	public void transferYourValue() {
-		
+		//lkl
 	}
 	
 	public boolean receiveValue( String s ) {
