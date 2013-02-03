@@ -41,7 +41,7 @@ public class Accumulator {
 		if(value.equals("0")) {
 			value = s;
 		}
-		
+
 		value += s;	
 	}
 
@@ -59,10 +59,10 @@ public class Accumulator {
 			return false;
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Accumulator ac = new Accumulator();
-		
+
 		ac.receiveValue("4");
 		ac.receiveValue("4");
 		ac.receiveValue("4");
@@ -73,4 +73,4 @@ public class Accumulator {
 		ac.receiveValue("ENTERMONEY");
 	}
 
-	}
+}
