@@ -24,7 +24,7 @@ class ControlUnit{
 		arithUnit = new ArithmeticUnit();
 	}
 	
-	public static void main(String args[]){
+	public static void main(String[] args){
 		if(args.length == 1) readFile(args[0]); //Read input from a .txt file.
 		else readLine(); //No file was given, asks for input.
 	}
@@ -35,6 +35,7 @@ class ControlUnit{
 
 	private static void readFile(String fileName) {
 		try {
+			System.out.println(fileName);
 			BufferedReader in = new BufferedReader(new FileReader(fileName));
 			 String command = in.readLine();
 			 if(command != null) {
