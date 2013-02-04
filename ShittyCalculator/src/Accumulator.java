@@ -1,9 +1,14 @@
 public class Accumulator {
 	private String value; 
+	private boolean hasPoint = false;
 
 	public Accumulator() {
 		value = "0";
 		display();
+	}
+
+	public String getValue() {
+		return value;
 	}
 
 	public void storeThisValue(String value) {
@@ -14,12 +19,10 @@ public class Accumulator {
 		if(o instanceof ArithmeticUnit) {
 			ArithmeticUnit au = (ArithmeticUnit) o;
 			au.storeThisValue(value);
-			
 			return true;
 		} else if(o instanceof MemoryRegistry) {
 			MemoryRegistry mr = (MemoryRegistry) o;
 			mr.storeThisValue(value);
-			
 			return true;
 		} else {
 			return false;
@@ -31,40 +34,45 @@ public class Accumulator {
 		if(value.length() < 11) {
 			if(isInteger(s)) {
 				appendToString(s);
-			} else if(s.charAt(0) == '.') {
+			} else if(s.charAt(0) == '.' && !hasPoint) {
 				appendToString(s);
-			} else {
-				storeThisValue(s);
+				hasPoint = true;
+			} else if(s.charAt(0) == '0' && hasPoint) {
+				syntaxError();
 			}
 
 			display();
 			return true;
 		} else {
-			storeThisValue("ERROR");
-			display();
+			syntaxError();
 			return false;
 		}
 	}
 
 
-
+	// Permits the accumulator to add either integers or .'s to the number
 	public void appendToString(String  s) {
 		if(value.equals("0")) {
 			value = s;
 		}
-
 		value += s;	
+	}
+
+	private void syntaxError() {
+		storeThisValue("Syntax Error");
 	}
 
 	// Sould be called on clear() in CU
 	public void reset() {
 		value = "0";
+		hasPoint = false;
 	}
 
 	public void display() {
 		System.out.println(value);
 	}
 
+	// Method verifying if a string passed is a number
 	public boolean isInteger(String v) {
 		try {
 			Integer.parseInt(v);
@@ -73,5 +81,4 @@ public class Accumulator {
 			return false;
 		}
 	}
-
 }

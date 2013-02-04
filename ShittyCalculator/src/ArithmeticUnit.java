@@ -4,6 +4,10 @@ public class ArithmeticUnit {
 	public ArithmeticUnit() {
 		result = 0;
 	}
+	
+	public double getValue() {
+		return result;
+	}
 
 	public double executeOperation(String op, String value) {
 		double operand = Double.parseDouble(value);

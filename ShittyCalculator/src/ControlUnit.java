@@ -18,7 +18,7 @@ class ControlUnit{
 		return instance;
 	}
 
-	private ControlUnit(){
+	private ControlUnit() {
 		accumulator = new Accumulator();
 		memReg = new MemoryRegistry();
 		arithUnit = new ArithmeticUnit();

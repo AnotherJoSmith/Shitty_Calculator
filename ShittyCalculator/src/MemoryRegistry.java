@@ -5,6 +5,9 @@ public class MemoryRegistry {
 		mem = 0;
 	}
 
+	public double getMem() {
+		return mem;
+	}
 
 	/*
 	 * If put in memory is called, CU calls this function.
