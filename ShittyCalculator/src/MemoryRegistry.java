@@ -13,10 +13,7 @@ public class MemoryRegistry {
 		mem = Double.parseDouble(value);
 	}
 
-	/*
-	 * If take from memory is called, CU calls this function 
-	 * passing through the AC in parameter
-	 */
+	// fancy getter lol
 	public double transferYourValue() {
 		return mem;
 	}

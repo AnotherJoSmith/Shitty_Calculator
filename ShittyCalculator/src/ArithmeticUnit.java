@@ -1,19 +1,23 @@
 public class ArithmeticUnit {
 	private double result;
-
+	private char operation; // Operation is stored in AU
+	
 	public ArithmeticUnit() {
 		result = 0;
 	}
-
-	public double executeOperation(String op, String value) {
+	
+	public double executeOperation(String value) {
 		double operand = Double.parseDouble(value);
-
-		if(op.equals("A")) {
+		
+		if(operation == 'A') {
 			result += operand;
-		} else if(op.equals("M")) {
-			result *= operand;
+		} else if (operation == 'M') {
+			result *= operand;	
+		} else {
+			System.out.println("ERROR! Cleared.");
+			result = 0;
 		}
-
+		
 		return result;
 	}
 
@@ -25,11 +29,13 @@ public class ArithmeticUnit {
 	public void storeThisValue(String value) {
 		result = Double.parseDouble(value);
 	}
-
-	/*
-	 * Used to transfer the result from an operation to the AC
-	 */
-
+	
+	
+	public void storeOperation(char op) {
+		operation = op;
+	}
+	 
+	// Used as getter for value
 	public double transferYourValue() {
 		return result;
 	}
