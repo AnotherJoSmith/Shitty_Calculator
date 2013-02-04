@@ -7,26 +7,13 @@ public class Accumulator {
 		display();
 	}
 
-	public String getValue() {
-		return value;
-	}
 
 	public void storeThisValue(String value) {
 		this.value = value;
 	}
 
-	public boolean transferYourValue(Object o) {
-		if(o instanceof ArithmeticUnit) {
-			ArithmeticUnit au = (ArithmeticUnit) o;
-			au.storeThisValue(value);
-			return true;
-		} else if(o instanceof MemoryRegistry) {
-			MemoryRegistry mr = (MemoryRegistry) o;
-			mr.storeThisValue(value);
-			return true;
-		} else {
-			return false;
-		}
+	public String transferYourValue() {
+		return value;
 	}
 
 	public boolean receiveValue(String s) {

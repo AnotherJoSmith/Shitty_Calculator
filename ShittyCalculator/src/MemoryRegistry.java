@@ -5,10 +5,6 @@ public class MemoryRegistry {
 		mem = 0;
 	}
 
-	public double getMem() {
-		return mem;
-	}
-
 	/*
 	 * If put in memory is called, CU calls this function.
 	 * CU should verify that accumulator is holding a number and not message
@@ -21,8 +17,8 @@ public class MemoryRegistry {
 	 * If take from memory is called, CU calls this function 
 	 * passing through the AC in parameter
 	 */
-	public void transferYourValue(Accumulator ac) {
-		ac.storeThisValue(Double.toString(mem));
+	public double transferYourValue() {
+		return mem;
 	}
 
 	// Should be called by clear() in CU

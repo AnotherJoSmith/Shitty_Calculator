@@ -4,10 +4,6 @@ public class ArithmeticUnit {
 	public ArithmeticUnit() {
 		result = 0;
 	}
-	
-	public double getValue() {
-		return result;
-	}
 
 	public double executeOperation(String op, String value) {
 		double operand = Double.parseDouble(value);
@@ -34,8 +30,8 @@ public class ArithmeticUnit {
 	 * Used to transfer the result from an operation to the AC
 	 */
 
-	public void transferYourValue(Accumulator ac) {
-		ac.storeThisValue(Double.toString(result));
+	public double transferYourValue() {
+		return result;
 	}
 
 	// Should be called on clear() in CU
