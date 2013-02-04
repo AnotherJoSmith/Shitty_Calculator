@@ -14,7 +14,6 @@ public class ArithmeticUnit{
 			result *= operand;
 		}
 
-
 		return result;
 	}
 
