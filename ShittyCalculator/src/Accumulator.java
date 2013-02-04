@@ -10,7 +10,20 @@ public class Accumulator {
 		this.value = value;
 	}
 
-	public void transferYourValue() {
+	public boolean transferYourValue(Object o) {
+		if(o instanceof ArithmeticUnit) {
+			ArithmeticUnit au = (ArithmeticUnit) o;
+			au.storeThisValue(value);
+			
+			return true;
+		} else if(o instanceof MemoryRegistry) {
+			MemoryRegistry mr = (MemoryRegistry) o;
+			mr.storeThisValue(value);
+			
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public boolean receiveValue(String s) {
